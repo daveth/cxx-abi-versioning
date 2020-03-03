@@ -13,7 +13,7 @@ make
 # should print "(from client libabc) abc::v3::foo::foo()"
 ```
 Build `upstream`, which provides libabc v4.
-Replace the version that `client` links against, and rebuild client.
+Replace the version of `libabc.a` that `client` links against, and rebuild client.
 ```bash
 cd ..
 mkdir upstream/out
@@ -25,6 +25,7 @@ make out/client
 ./out/client
 # should print "(from upstream libabc) abc::v3::foo::foo()"
 ```
+
 ## TODO
 - Dynamic linking (!!)
 - Actually have ABI breaking differences (add members to `abc::foo`)
